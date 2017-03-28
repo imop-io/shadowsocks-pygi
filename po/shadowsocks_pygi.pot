@@ -1,0 +1,1174 @@
+# pot file
+# Copyright (C) 2017
+# This file is distributed under the same license as the shadowsocks-pygi package.
+# songww <sww4718168@gmail.com>, 2017
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-28 23:03+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:60
+msgid "_Auto_Connect"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:75
+msgid "_Auto_Reconnect"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:101
+msgid "_Update_Pac"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:115
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:140
+msgid "_Proxy_Type"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:158
+msgid "_Global_Proxy"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:174
+msgid "_Auto_Proxy"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:190
+msgid "_None_Proxy"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:264
+msgid "_Add"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:278
+msgid "_Delete"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:330
+#: ../shadowsocks_pygi/handler.py:202
+msgid "ServerNameLabel"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:348
+#: ../shadowsocks_pygi/handler.py:203
+msgid "ConnectStateLabel"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:398
+msgid "_Gateway:"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:412
+msgid "192.168.0.1:1222"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:425
+msgid "LastConnect:"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:439
+msgid "2017/03/15 19:59:59"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:554
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:590
+msgid "label"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:619
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:636
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:653
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:673
+msgid "radiobutton"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:852
+msgid "_Name"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:880
+msgid "_Address"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:906
+msgid "_Port"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:934
+msgid "_Password"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:963
+msgid "_CryptMethod"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:991
+msgid "_Timeout"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:1006
+#: ../shadowsocks_pygi/handler.py:283
+msgid "600"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:1016
+msgid "_Show_Password"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:26
+msgid "https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:27
+#, python-format
+msgid "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:36
+msgid "'ConfigItem' object has no attribute '"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:36
+msgid "'"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:50
+msgid "pac.yml"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:51
+msgid ".yml"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:52
+msgid "local.yml"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:53
+msgid "servers"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:54 ../shadowsocks_pygi/pac.py:186
+#: ../shadowsocks_pygi/shadowsocks.py:27
+msgid "resources"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:60 ../shadowsocks_pygi/config.py:65
+#: ../shadowsocks_pygi/config.py:85 ../shadowsocks_pygi/config.py:87
+msgid ".json"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:79 ../shadowsocks_pygi/config.py:93
+#: ../shadowsocks_pygi/config.py:95 ../shadowsocks_pygi/config.py:186
+#: ../shadowsocks_pygi/pac.py:44 ../shadowsocks_pygi/pac.py:45
+#: ../shadowsocks_pygi/publicsuffix.py:52
+msgid "utf8"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:92
+msgid "yml"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:94
+msgid "json"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:96
+msgid " is not an json or yaml file!"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:115
+msgid "user-rules-sample.txt"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:123 ../shadowsocks_pygi/config.py:124
+#: ../shadowsocks_pygi/shadowsocks.py:231
+msgid "false"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:126
+msgid "ss24x24.png"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:130 ../shadowsocks_pygi/config.py:134
+#: ../shadowsocks_pygi/ping.py:25
+msgid "127.0.0.1"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:137 ../shadowsocks_pygi/local.py:32
+msgid "daemon"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:141
+msgid ".pid"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:145
+msgid "-access.log"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:158 ../shadowsocks_pygi/config.py:161
+#: ../shadowsocks_pygi/config.py:162
+msgid "pac"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:158
+msgid ".pac"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:161
+msgid "user-rules.txt"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:162
+msgid "gfwlist.txt"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:173 ../shadowsocks_pygi/config.py:179
+msgid "level"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:173 ../shadowsocks_pygi/config.py:179
+#: ../shadowsocks_pygi/config.py:191 ../shadowsocks_pygi/config.py:197
+msgid "DEBUG"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:174 ../shadowsocks_pygi/config.py:180
+msgid "class"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:174
+msgid "logging.StreamHandler"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:175
+msgid "stream"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:175
+msgid "ext://sys.stdout"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:176 ../shadowsocks_pygi/config.py:181
+msgid "formatter"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:176 ../shadowsocks_pygi/config.py:181
+msgid "default"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:180
+msgid "logging.FileHandler"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:182
+msgid "filename"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:184
+msgid ".log"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:186
+msgid "encoding"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:193 ../shadowsocks_pygi/config.py:198
+msgid "console"
+msgstr ""
+
+#: ../shadowsocks_pygi/config.py:193 ../shadowsocks_pygi/config.py:198
+msgid "logfile"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:24
+msgid "org.gnome.system.proxy"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:25
+msgid "localhost"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:25
+msgid "127.0.0.0/8"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:25
+msgid "::1"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:38
+msgid "Set hosts<{}> to be ignored"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:43 ../shadowsocks_pygi/gsettings.py:49
+msgid "ignore-hosts"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:44
+msgid "as"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:46
+msgid "Apply ignored hosts<{}>"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:52
+msgid "Get ignored hosts<{}>"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:55
+msgid "socks5"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:56
+msgid "Set proxy type: global."
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:59 ../shadowsocks_pygi/gsettings.py:65
+#: ../shadowsocks_pygi/gsettings.py:71
+msgid "mode"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:59 ../shadowsocks_pygi/gsettings.py:65
+#: ../shadowsocks_pygi/gsettings.py:66 ../shadowsocks_pygi/gsettings.py:71
+#: ../shadowsocks_pygi/gsettings.py:73 ../shadowsocks_pygi/shadowsocks.py:208
+#: ../shadowsocks_pygi/shadowsocks.py:209
+msgid "s"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:59 ../shadowsocks_pygi/shadowsocks.py:146
+#: ../shadowsocks_pygi/shadowsocks.py:209
+msgid "none"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:60
+msgid "Set proxy type: None."
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:64
+msgid "use-same-proxy"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:64
+msgid "b"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:65 ../shadowsocks_pygi/shadowsocks.py:140
+#: ../shadowsocks_pygi/shadowsocks.py:141
+msgid "auto"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:66
+msgid "autoconfig-url"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:67
+msgid "Set auto proxy type, with pac: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:71
+msgid "manual"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:72
+msgid "socks"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:73
+msgid "host"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:74
+msgid "port"
+msgstr ""
+
+#: ../shadowsocks_pygi/gsettings.py:74
+msgid "i"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:18
+msgid "Save button clicked."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:22
+msgid "Cancel button clicked."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:23 ../shadowsocks_pygi/handler.py:144
+msgid "Hide dialog<{}>."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:27
+msgid "Server_Save button clicked."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:29 ../shadowsocks_pygi/handler.py:130
+#: ../shadowsocks_pygi/handler.py:277 ../shadowsocks_pygi/handler.py:278
+msgid "NameEntry"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:30 ../shadowsocks_pygi/handler.py:132
+#: ../shadowsocks_pygi/handler.py:280
+msgid "PortEntry"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:31 ../shadowsocks_pygi/handler.py:131
+#: ../shadowsocks_pygi/handler.py:279
+msgid "AddressEntry"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:32 ../shadowsocks_pygi/handler.py:133
+#: ../shadowsocks_pygi/handler.py:281 ../shadowsocks_pygi/handler.py:288
+msgid "PasswordEntry"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:33 ../shadowsocks_pygi/handler.py:135
+#: ../shadowsocks_pygi/handler.py:283
+msgid "TimeoutEntry"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:34 ../shadowsocks_pygi/handler.py:138
+#: ../shadowsocks_pygi/shadowsocks.py:198
+msgid "CryptMethodCombo"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:62 ../shadowsocks_pygi/shadowsocks.py:185
+msgid "ServerListView"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:63 ../shadowsocks_pygi/handler.py:94
+msgid "Add Server..."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:66 ../shadowsocks_pygi/handler.py:81
+msgid "Append to new server <{}> to server_list"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:72
+msgid "Delete old server <{}> from config"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:86
+msgid "Delete old server <{}> from server_list"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:92
+msgid "Create button clicked."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:93 ../shadowsocks_pygi/handler.py:125
+msgid "ServerSettingDialog"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:98
+msgid "Hide dialog<Add Server...>."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:102
+msgid "Delete button clicked."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:117
+msgid "Advance button clicked."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:120
+msgid "Selected server is: {}."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:129
+msgid "server"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:133
+msgid "password"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:134 ../shadowsocks_pygi/handler.py:282
+msgid "PasswordDisplay"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:135
+msgid "timeout"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:137
+msgid "method"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:149
+msgid "Connection_Switch button clicked. state to be {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:153
+msgid "sslocal is already running!"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:157 ../shadowsocks_pygi/local.py:34
+msgid "start"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:163
+msgid "sslocal is already stopped!"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:167 ../shadowsocks_pygi/shadowsocks.py:159
+msgid "stop"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:172
+msgid "Successed to change Connection_Switch's state to {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:178
+msgid "Server_Switch button clicked, State must to be {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:182
+msgid "Selected server is: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:186
+msgid "Successed to change state<{}> of server<{}>"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:190 ../shadowsocks_pygi/handler.py:205
+msgid "ServerControl"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:200
+msgid "Server<{}> is selected."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:203
+msgid "Not"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:204
+msgid "Gateway"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:204
+msgid ":1080"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:206
+msgid "enabled"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:210
+msgid "Gfwlist_Update is clicked."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:213
+msgid "socks5://{}:{}"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:221
+msgid "Failed to update gfwlist: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:225
+msgid "Gfwlist is already up to date."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:228
+msgid "Fetch user roles: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:230 ../shadowsocks_pygi/handler.py:239
+msgid "Success to generate pac file."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:234
+msgid "User rules is changed."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:243
+msgid "Menu btn clicked."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:244 ../shadowsocks_pygi/shadowsocks.py:78
+msgid "MenuPop"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:250
+msgid "Close button of dialog<{}> is clicked"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:257
+msgid "Dialog<{}> receive DELETE_EVENT response."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:263
+msgid "Dialog<{}> receive response signal: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:269
+msgid "Dialog<{}> is hidden."
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:274
+msgid "Dialog<{}> receive hide signal"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:287
+msgid "Show password check button is clicked"
+msgstr ""
+
+#: ../shadowsocks_pygi/handler.py:291
+msgid "Is show password set to: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/__init__.py:7
+msgid "Gtk"
+msgstr ""
+
+#: ../shadowsocks_pygi/__init__.py:7
+msgid "3.0"
+msgstr ""
+
+#: ../shadowsocks_pygi/__init__.py:8
+msgid "GLib"
+msgstr ""
+
+#: ../shadowsocks_pygi/__init__.py:8 ../shadowsocks_pygi/__init__.py:9
+msgid "2.0"
+msgstr ""
+
+#: ../shadowsocks_pygi/__init__.py:9
+msgid "Gio"
+msgstr ""
+
+#: ../shadowsocks_pygi/__init__.py:10
+msgid "AppIndicator3"
+msgstr ""
+
+#: ../shadowsocks_pygi/__init__.py:10
+msgid "0.1"
+msgstr ""
+
+#: ../shadowsocks_pygi/local.py:25
+msgid "Server config is updated to {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/local.py:29
+msgid "get_config patched successful."
+msgstr ""
+
+#: ../shadowsocks_pygi/local.py:33
+msgid "Receive action<{}> for sslocal."
+msgstr ""
+
+#: ../shadowsocks_pygi/local.py:38
+msgid "Ready to connect to {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/local.py:43
+msgid "Control process return. child: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/local.py:47
+msgid "Control sslocal..."
+msgstr ""
+
+#: ../shadowsocks_pygi/local.py:56
+msgid "No server is enabled!"
+msgstr ""
+
+#: ../shadowsocks_pygi/local.py:60 ../shadowsocks_pygi/local.py:61
+msgid "pid-file"
+msgstr ""
+
+#: ../shadowsocks_pygi/local.py:63 ../shadowsocks_pygi/local.py:64
+msgid "log-file"
+msgstr ""
+
+#: ../shadowsocks_pygi/local.py:67
+msgid "local_address"
+msgstr ""
+
+#: ../shadowsocks_pygi/local.py:70
+msgid "local_port"
+msgstr ""
+
+#: ../shadowsocks_pygi/notify.py:7
+msgid "Notify"
+msgstr ""
+
+#: ../shadowsocks_pygi/notify.py:7
+msgid "0.7"
+msgstr ""
+
+#: ../shadowsocks_pygi/notify.py:26
+msgid "Show notify message: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:14
+msgid "0.0.1"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:23
+msgid "%a, %d %b %Y %H:%M:%S %z"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:39 ../shadowsocks_pygi/pac.py:177
+msgid "w"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:52 ../shadowsocks_pygi/pac.py:65
+msgid "! {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:58 ../shadowsocks_pygi/pac.py:70
+msgid "! Last Modified:"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:59 ../shadowsocks_pygi/pac.py:71
+#: ../shadowsocks_pygi/pac.py:166
+msgid ":"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:88
+msgid "__version__"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:89
+msgid "__generated__"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:90
+msgid "__modified__"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:91
+msgid "__gfwlist_from__"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:92
+msgid "__proxy_host__"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:93
+msgid "__proxy_port__"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:94
+msgid "__rules__"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:99
+msgid "http"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:101
+msgid "https"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:124 ../shadowsocks_pygi/publicsuffix.py:83
+msgid "!"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:127
+msgid "@@"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:128
+msgid "@!."
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:133
+msgid ".*"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:133 ../shadowsocks_pygi/pac.py:134
+#: ../shadowsocks_pygi/pac.py:211 ../shadowsocks_pygi/pac.py:223
+#: ../shadowsocks_pygi/pac.py:224
+msgid "/"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:134
+msgid "\\/"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:134
+msgid "\\."
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:134 ../shadowsocks_pygi/pac.py:204
+#: ../shadowsocks_pygi/pac.py:213 ../shadowsocks_pygi/pac.py:232
+#: ../shadowsocks_pygi/publicsuffix.py:89
+#: ../shadowsocks_pygi/publicsuffix.py:108
+#: ../shadowsocks_pygi/publicsuffix.py:138
+#: ../shadowsocks_pygi/publicsuffix.py:145
+msgid "."
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:136
+msgid "[a-z0-9]+\\..*"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:141
+msgid "[a-z]+\\.\\(.*\\)"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:142
+msgid "[\\(\\)]"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:143
+msgid "\\|"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:145
+msgid "{}{}"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:152 ../shadowsocks_pygi/pac.py:153
+msgid "|"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:166
+msgid ","
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:171
+msgid "pac-tpl.min.js"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:172
+msgid "pac-tpl.js"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:199 ../shadowsocks_pygi/publicsuffix.py:51
+msgid "public_suffix_list.dat"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:206
+#, python-format
+msgid "%2f"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:209
+msgid "http:"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:209
+msgid "https:"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:212
+msgid "http://"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:220 ../shadowsocks_pygi/pac.py:222
+#: ../shadowsocks_pygi/publicsuffix.py:122
+msgid "*"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:223
+msgid "/*."
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:224
+msgid "/([a-zA-Z0-9]+)\\*\\."
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:225
+msgid "\\*([a-zA-Z0-9_%]+)"
+msgstr ""
+
+#: ../shadowsocks_pygi/pac.py:226
+msgid "^([a-zA-Z0-9_%]+)\\*"
+msgstr ""
+
+#: ../shadowsocks_pygi/ping.py:63
+msgid "{:.2f}%"
+msgstr ""
+
+#: ../shadowsocks_pygi/publicsuffix.py:1
+msgid "Public Suffix List module for Python.\n"
+msgstr ""
+
+#: ../shadowsocks_pygi/publicsuffix.py:13
+msgid "http://publicsuffix.org/list/public_suffix_list.dat"
+msgstr ""
+
+#: ../shadowsocks_pygi/publicsuffix.py:17
+msgid ""
+"Downloads the latest public suffix list from publicsuffix.org.\n"
+"\n"
+"    Returns a file object containing the public suffix list.\n"
+"    "
+msgstr ""
+
+#: ../shadowsocks_pygi/publicsuffix.py:22
+#, python-format
+msgid "Python-publicsuffix/%s"
+msgstr ""
+
+#: ../shadowsocks_pygi/publicsuffix.py:23
+msgid "User-Agent"
+msgstr ""
+
+#: ../shadowsocks_pygi/publicsuffix.py:29
+msgid "charset"
+msgstr ""
+
+#: ../shadowsocks_pygi/publicsuffix.py:38
+msgid ""
+"Reads and parses public suffix list.\n"
+"\n"
+"        input_file is a file object or another iterable that returns\n"
+"        lines of a public suffix list file.\n"
+"\n"
+"        The file format is described at http://publicsuffix.org/list/\n"
+"        "
+msgstr ""
+
+#: ../shadowsocks_pygi/publicsuffix.py:48
+msgid "Using the built-in public suffix "
+msgstr ""
+
+#: ../shadowsocks_pygi/publicsuffix.py:49
+msgid "list is deprecated. Please use input_file."
+msgstr ""
+
+#: ../shadowsocks_pygi/publicsuffix.py:105
+msgid "//"
+msgstr ""
+
+#: ../shadowsocks_pygi/publicsuffix.py:128
+msgid ""
+"get_public_suffix(\"www.example.com\") -> \"example.com\"\n"
+"\n"
+"        Calling this function with a DNS name will return the\n"
+"        public suffix for that name.\n"
+"\n"
+"        Note that for internationalized domains the list at\n"
+"        http://publicsuffix.org uses decoded names, so it is\n"
+"        up to the caller to decode any Punycode-encoded names.\n"
+"        "
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:27
+msgid "shadowsocks.ui"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:31
+msgid "auto_connect"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:31
+msgid "do_set_auto_connect"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:32
+msgid "auto_reconnect"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:32
+msgid "do_set_auto_reconnect"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:38
+msgid "io.imop.shadowsocks"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:43
+msgid "Start..."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:53
+msgid "Load ui from {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:56
+msgid "Connect signal from class<Handler>"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:73
+msgid "Init window..."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:74
+msgid "ShadowsocksWindow"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:75
+msgid "HeaderBar"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:77
+msgid "MenuButton"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:80
+msgid "delete-event"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:81
+msgid "Window delete event."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:87
+msgid "Show window..."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:91
+msgid "Application start."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:95
+msgid "Application stop."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:99
+msgid "Application command line parser..."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:105
+msgid "Auto_connect is selected. Current state is {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:114
+msgid "Auto_Reconnect is selected. Current state is {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:122
+msgid "Ready to update pac file.."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:127
+msgid "Successful to update gfwlist"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:129
+msgid "Failed to update gfwlist"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:134
+msgid "Now proxy type is: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:143
+msgid "global"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:148
+msgid "Unknown proxy type: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:154
+msgid "ConnectionControl"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:164
+msgid "Startup."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:165
+msgid "network-vpn-symbolic"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:167
+#: ../shadowsocks_pygi/shadowsocks.py:168
+msgid "state"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:172
+msgid "Quit"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:173
+#: ../shadowsocks_pygi/shadowsocks.py:211
+#: ../shadowsocks_pygi/shadowsocks.py:222
+msgid "activate"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:178
+msgid "Load view of server list..."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:183
+msgid "Append server<{}> to server list."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:187
+msgid "ServerSelection"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:189
+msgid "_Server_List"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:191
+msgid "Server list loaded."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:194
+msgid "Load view of crypt methods..."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:202
+msgid "text"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:203
+msgid "Crypt methods list loaded."
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:207
+msgid "proxy_select"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:214
+msgid "Proxy type from config: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:217
+msgid "'none'"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:221
+msgid "update_pac"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:229
+msgid "change-state"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:232
+msgid "{} from config: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:236
+msgid "__main__"
+msgstr ""
+
+#: ../shadowsocks_pygi/tasks.py:27
+msgid "Task<{}> with args<{}> is starting"
+msgstr ""
+
+#: ../shadowsocks_pygi/tasks.py:34
+msgid "Task<{}> with args<{}> is completed"
+msgstr ""
+
+#: ../shadowsocks_pygi/tasks.py:40
+msgid "Result of Task<{}> is: {}"
+msgstr ""
+
+#: ../shadowsocks_pygi/tasks.py:44
+msgid "An error occured when Task<{}> is running."
+msgstr ""

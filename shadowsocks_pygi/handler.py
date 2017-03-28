@@ -3,6 +3,7 @@
 import logging
 
 from .pac import Pac
+from .tasks import AsyncCall
 from .config import Config, ConfigItem
 from gi.repository import Gtk
 
@@ -128,7 +129,7 @@ class Handler:
         addr = config.get('server', '')
         builder.get_object('NameEntry').set_text(server_name)
         builder.get_object('AddressEntry').set_text(addr)
-        builder.get_object('PortEntry').set_text(config.get('server_port', ''))
+        builder.get_object('PortEntry').set_text(str(config.server_port))
         builder.get_object('PasswordEntry').set_text(config.get('password', ''))
         builder.get_object('PasswordDisplay').set_active(False)
         builder.get_object('TimeoutEntry').set_text(str(config.get('timeout')))
@@ -137,7 +138,7 @@ class Handler:
         builder.get_object('CryptMethodCombo') \
             .set_active_iter(self.app.methods_map[method])
 
-        setting_dialog.show_all()
+        setting_dialog.show()
         setting_dialog.run()
         setting_dialog.hide()
         self.logger.debug('Hide dialog<{}>.'.format(server_name))
@@ -147,17 +148,25 @@ class Handler:
         self.logger.debug(
             'Connection_Switch button clicked. state to be {}'.format(state)
         )
-        if state is True:
-            self.app.sslocal.control('start')
-            # ping
-            # generate config
-            # sslocal.start()
-            # TODO: start failed
+        if state:
+            if self.app.sslocal.is_running:
+                self.logger.debug('sslocal is already running!')
+            else:
+                AsyncCall(
+                    self.app.sslocal.control,
+                    'start',
+                    callback=lambda r, e: switch.set_state(False) if e else None
+                )
             switch.set_state(True)
         else:
-            # get config
-            # sslocal.stop()
-            self.app.sslocal.control('stop')
+            if not self.app.sslocal.is_running:
+                self.logger.debug('sslocal is already stopped!')
+            else:
+                AsyncCall(
+                    self.app.sslocal.control,
+                    'stop',
+                    callback=lambda r, e: switch.set_state(True) if e else None
+                )
             switch.set_state(False)
         self.logger.debug(
             'Successed to change Connection_Switch\'s state to {}'.format(state)
@@ -178,6 +187,7 @@ class Handler:
                 server_name, state
             )
         )
+        self.app.builder.get_object('ServerControl').set_state(state)
         return True
 
     def on_selected_server_changed(self, selection, *args):
@@ -215,7 +225,7 @@ class Handler:
             self.logger.error('Gfwlist is already up to date.')
             raise Exception()  # TODO: add notify -- Almost new
         pac.fetch_user_rules()
-        self.logger.debug('Fetch user roles: {}'.format(''))
+        self.logger.debug('Fetch user roles.')
         pac.save(pac.generate())
         self.logger.info('Success to generate pac file.')
         return True

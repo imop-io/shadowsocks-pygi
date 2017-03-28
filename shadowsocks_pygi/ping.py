@@ -30,6 +30,7 @@ class Ping:
     def _create_socket(self, family, _type):
         sock = self.socket(family, _type)
         sock.settimeout(self._timeout)
+        return sock
 
     def ping(self, count=4):
         for n in range(count + 1):

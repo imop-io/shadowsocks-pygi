@@ -1,0 +1,492 @@
+# pot file
+# Copyright (C) 2017
+# This file is distributed under the same license as the shadowsocks-pygi package.
+# songww <sww4718168@gmail.com>, 2017
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-28 23:03+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:60
+msgid "_Auto_Connect"
+msgstr "自动连接"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:75
+msgid "_Auto_Reconnect"
+msgstr "自动重连"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:101
+msgid "_Update_Pac"
+msgstr "从Gfwlist更新Pac"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:115
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:140
+msgid "_Proxy_Type"
+msgstr "代理类型"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:158
+msgid "_Global_Proxy"
+msgstr "全局代理"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:174
+msgid "_Auto_Proxy"
+msgstr "自动代理"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:190
+msgid "_None_Proxy"
+msgstr "关闭代理"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:264
+msgid "_Add"
+msgstr "添加"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:278
+msgid "_Delete"
+msgstr "删除"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:398
+msgid "_Gateway:"
+msgstr "网关"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:425
+msgid "LastConnect:"
+msgstr "上次连接:"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:554
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:590
+msgid "label"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:619
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:636
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:653
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:673
+msgid "radiobutton"
+msgstr ""
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:852
+msgid "_Name"
+msgstr "备注"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:880
+msgid "_Address"
+msgstr "服务器地址"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:906
+msgid "_Port"
+msgstr "服务器端口"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:934
+msgid "_Password"
+msgstr "密码"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:963
+msgid "_CryptMethod"
+msgstr "加密方法"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:991
+msgid "_Timeout"
+msgstr "超时"
+
+#: ../shadowsocks_pygi/resources/shadowsocks.ui:1016
+msgid "_Show_Password"
+msgstr "显示密码"
+
+#: ../shadowsocks_pygi/config.py:36
+msgid "'ConfigItem' object has no attribute '"
+msgstr "'ConfigItem' 对象没有该属性"
+
+#: ../shadowsocks_pygi/config.py:96
+msgid " is not an json or yaml file!"
+msgstr "不是json或者yaml格式的文件!"
+
+#: ../shadowsocks_pygi/gsettings.py:38
+msgid "Set hosts<{}> to be ignored"
+msgstr "设置需要忽略的地址<{}>"
+
+#: ../shadowsocks_pygi/gsettings.py:46
+msgid "Apply ignored hosts<{}>"
+msgstr "使忽略的地址生效<{}>"
+
+#: ../shadowsocks_pygi/gsettings.py:52
+msgid "Get ignored hosts<{}>"
+msgstr "获取忽略的地址<{}>"
+
+#: ../shadowsocks_pygi/gsettings.py:56
+msgid "Set proxy type: global."
+msgstr "设置代理类型: 全局"
+
+#: ../shadowsocks_pygi/gsettings.py:60
+msgid "Set proxy type: None."
+msgstr "设置代理类型: 关"
+
+#: ../shadowsocks_pygi/gsettings.py:67
+msgid "Set auto proxy type, with pac: {}"
+msgstr "设置自动代理, pac文件路径: {}"
+
+#: ../shadowsocks_pygi/handler.py:18
+msgid "Save button clicked."
+msgstr "按下了保存按钮"
+
+#: ../shadowsocks_pygi/handler.py:22
+msgid "Cancel button clicked."
+msgstr "按下了取消按钮"
+
+#: ../shadowsocks_pygi/handler.py:23 ../shadowsocks_pygi/handler.py:144
+msgid "Hide dialog<{}>."
+msgstr "隐藏dialog<{}>"
+
+#: ../shadowsocks_pygi/handler.py:27
+msgid "Server_Save button clicked."
+msgstr "按下了保存服务器按钮"
+
+#: ../shadowsocks_pygi/handler.py:63 ../shadowsocks_pygi/handler.py:94
+msgid "Add Server..."
+msgstr "添加服务器"
+
+#: ../shadowsocks_pygi/handler.py:66 ../shadowsocks_pygi/handler.py:81
+msgid "Append to new server <{}> to server_list"
+msgstr "添加新服务器<{}>到服务器列表"
+
+#: ../shadowsocks_pygi/handler.py:72
+msgid "Delete old server <{}> from config"
+msgstr "从配置里删除旧服务器"
+
+#: ../shadowsocks_pygi/handler.py:86
+msgid "Delete old server <{}> from server_list"
+msgstr "从服务器列表里删除旧服务器"
+
+#: ../shadowsocks_pygi/handler.py:92
+msgid "Create button clicked."
+msgstr "按下了新建按钮"
+
+#: ../shadowsocks_pygi/handler.py:98
+msgid "Hide dialog<Add Server...>."
+msgstr "隐藏<添加服务器>dialog"
+
+#: ../shadowsocks_pygi/handler.py:102
+msgid "Delete button clicked."
+msgstr "按下了删除按钮"
+
+#: ../shadowsocks_pygi/handler.py:117
+msgid "Advance button clicked."
+msgstr "按下了Advance按钮"
+
+#: ../shadowsocks_pygi/handler.py:120
+msgid "Selected server is: {}."
+msgstr "选择的服务器是: {}"
+
+#: ../shadowsocks_pygi/handler.py:149
+msgid "Connection_Switch button clicked. state to be {}"
+msgstr "连接状态切换成了{}"
+
+#: ../shadowsocks_pygi/handler.py:153
+msgid "sslocal is already running!"
+msgstr "sslocal已经在运行了"
+
+#: ../shadowsocks_pygi/handler.py:163
+msgid "sslocal is already stopped!"
+msgstr "sslocal已经停止了"
+
+#: ../shadowsocks_pygi/handler.py:172
+msgid "Successed to change Connection_Switch's state to {}"
+msgstr "连接状态成功更改为了: {}"
+
+#: ../shadowsocks_pygi/handler.py:178
+msgid "Server_Switch button clicked, State must to be {}"
+msgstr "服务器是否启用切换到了: {}"
+
+#: ../shadowsocks_pygi/handler.py:182
+msgid "Selected server is: {}"
+msgstr "选择的服务器是: {}"
+
+#: ../shadowsocks_pygi/handler.py:186
+msgid "Successed to change state<{}> of server<{}>"
+msgstr "服务器启用状态成功切换为: <{}>"
+
+#: ../shadowsocks_pygi/handler.py:200
+msgid "Server<{}> is selected."
+msgstr "选择了服务器<{}>。"
+
+#: ../shadowsocks_pygi/handler.py:210
+msgid "Gfwlist_Update is clicked."
+msgstr "点击了更新gfwlist"
+
+#: ../shadowsocks_pygi/handler.py:221
+msgid "Failed to update gfwlist: {}"
+msgstr "更新gfwlist失败: {}"
+
+#: ../shadowsocks_pygi/handler.py:225
+msgid "Gfwlist is already up to date."
+msgstr "Gfwlist已经是最新了."
+
+#: ../shadowsocks_pygi/handler.py:228
+msgid "Fetch user roles: {}"
+msgstr "获取用户规则: {}"
+
+#: ../shadowsocks_pygi/handler.py:230 ../shadowsocks_pygi/handler.py:239
+msgid "Success to generate pac file."
+msgstr "成功生成pac文件."
+
+#: ../shadowsocks_pygi/handler.py:234
+msgid "User rules is changed."
+msgstr "用户规则更新了"
+
+#: ../shadowsocks_pygi/handler.py:243
+msgid "Menu btn clicked."
+msgstr "按下了菜单按钮"
+
+#: ../shadowsocks_pygi/handler.py:250
+msgid "Close button of dialog<{}> is clicked"
+msgstr "按下了<{}>dialog的关闭按钮"
+
+#: ../shadowsocks_pygi/handler.py:257
+msgid "Dialog<{}> receive DELETE_EVENT response."
+msgstr "<{}>Dialog收到了DELETE_EVENT事件的响应"
+
+#: ../shadowsocks_pygi/handler.py:263
+msgid "Dialog<{}> receive response signal: {}"
+msgstr "<{}>Dialog收到了响应: {}"
+
+#: ../shadowsocks_pygi/handler.py:269
+msgid "Dialog<{}> is hidden."
+msgstr "隐藏了Dialog<{}>"
+
+#: ../shadowsocks_pygi/handler.py:274
+msgid "Dialog<{}> receive hide signal"
+msgstr "Dialog<{}>收到了隐藏信号"
+
+#: ../shadowsocks_pygi/handler.py:287
+msgid "Show password check button is clicked"
+msgstr "选择了显示密码"
+
+#: ../shadowsocks_pygi/handler.py:291
+msgid "Is show password set to: {}"
+msgstr "显示密码被设置为了: {}"
+
+#: ../shadowsocks_pygi/local.py:25
+msgid "Server config is updated to {}"
+msgstr "服务器配置更新成了: {}"
+
+#: ../shadowsocks_pygi/local.py:29
+msgid "get_config patched successful."
+msgstr "patch get_config 函数成功"
+
+#: ../shadowsocks_pygi/local.py:33
+msgid "Receive action<{}> for sslocal."
+msgstr "sslocal 收到 {} 命令"
+
+#: ../shadowsocks_pygi/local.py:38
+msgid "Ready to connect to {}"
+msgstr "准备连接到 {}"
+
+#: ../shadowsocks_pygi/local.py:43
+msgid "Control process return. child: {}"
+msgstr "控制进程结束，子进程PID: {}"
+
+#: ../shadowsocks_pygi/local.py:47
+msgid "Control sslocal..."
+msgstr "控制sslocal"
+
+#: ../shadowsocks_pygi/local.py:56
+msgid "No server is enabled!"
+msgstr "没有服务器被启用!"
+
+#: ../shadowsocks_pygi/notify.py:26
+msgid "Show notify message: {}"
+msgstr "显示通知信息: {}"
+
+#: ../shadowsocks_pygi/publicsuffix.py:1
+msgid "Public Suffix List module for Python.\n"
+msgstr "Python 的 Public Suffix List 模块"
+
+#: ../shadowsocks_pygi/publicsuffix.py:17
+msgid ""
+"Downloads the latest public suffix list from publicsuffix.org.\n"
+"\n"
+"    Returns a file object containing the public suffix list.\n"
+"    "
+msgstr ""
+"从publicsuffix.org下载最新的public suffix list\n"
+"\n"
+"    返回包含public suffix list的文件对象\n"
+"    "
+
+#: ../shadowsocks_pygi/publicsuffix.py:22
+#, python-format
+msgid "Python-publicsuffix/%s"
+msgstr "Python-publicsuffix/%s"
+
+#: ../shadowsocks_pygi/publicsuffix.py:38
+msgid ""
+"Reads and parses public suffix list.\n"
+"\n"
+"        input_file is a file object or another iterable that returns\n"
+"        lines of a public suffix list file.\n"
+"\n"
+"        The file format is described at http://publicsuffix.org/list/\n"
+"        "
+msgstr ""
+"Reads and parses public suffix list.\n"
+"\n"
+"        input_file is a file object or another iterable that returns\n"
+"        lines of a public suffix list file.\n"
+"\n"
+"        The file format is described at http://publicsuffix.org/list/\n"
+"        "
+
+#: ../shadowsocks_pygi/publicsuffix.py:48
+msgid "Using the built-in public suffix "
+msgstr "使用内部的public suffix"
+
+#: ../shadowsocks_pygi/publicsuffix.py:49
+msgid "list is deprecated. Please use input_file."
+msgstr "list 已废弃，请使用 input_file"
+
+#: ../shadowsocks_pygi/publicsuffix.py:128
+msgid ""
+"get_public_suffix(\"www.example.com\") -> \"example.com\"\n"
+"\n"
+"        Calling this function with a DNS name will return the\n"
+"        public suffix for that name.\n"
+"\n"
+"        Note that for internationalized domains the list at\n"
+"        http://publicsuffix.org uses decoded names, so it is\n"
+"        up to the caller to decode any Punycode-encoded names.\n"
+"        "
+msgstr ""
+"get_public_suffix(\"www.example.com\") -> \"example.com\"\n"
+"\n"
+"        Calling this function with a DNS name will return the\n"
+"        public suffix for that name.\n"
+"\n"
+"        Note that for internationalized domains the list at\n"
+"        http://publicsuffix.org uses decoded names, so it is\n"
+"        up to the caller to decode any Punycode-encoded names.\n"
+"        "
+
+#: ../shadowsocks_pygi/shadowsocks.py:38
+msgid "io.imop.shadowsocks"
+msgstr ""
+
+#: ../shadowsocks_pygi/shadowsocks.py:43
+msgid "Start..."
+msgstr "开始运行..."
+
+#: ../shadowsocks_pygi/shadowsocks.py:53
+msgid "Load ui from {}"
+msgstr "从{}加载ui"
+
+#: ../shadowsocks_pygi/shadowsocks.py:56
+msgid "Connect signal from class<Handler>"
+msgstr "连接到信号处理类<Handler>"
+
+#: ../shadowsocks_pygi/shadowsocks.py:73
+msgid "Init window..."
+msgstr "初始化窗口..."
+
+#: ../shadowsocks_pygi/shadowsocks.py:81
+msgid "Window delete event."
+msgstr "主窗口被删除"
+
+#: ../shadowsocks_pygi/shadowsocks.py:87
+msgid "Show window..."
+msgstr "显示窗口..."
+
+#: ../shadowsocks_pygi/shadowsocks.py:91
+msgid "Application start."
+msgstr "Application start."
+
+#: ../shadowsocks_pygi/shadowsocks.py:95
+msgid "Application stop."
+msgstr "Application stop."
+
+#: ../shadowsocks_pygi/shadowsocks.py:99
+msgid "Application command line parser..."
+msgstr "解析命令行参数"
+
+#: ../shadowsocks_pygi/shadowsocks.py:105
+msgid "Auto_connect is selected. Current state is {}"
+msgstr "点击了自动连接，现在状态是: {}"
+
+#: ../shadowsocks_pygi/shadowsocks.py:114
+msgid "Auto_Reconnect is selected. Current state is {}"
+msgstr "点击了自动重连，现在状态是: {}"
+
+#: ../shadowsocks_pygi/shadowsocks.py:122
+msgid "Ready to update pac file.."
+msgstr "准备更新pac文件"
+
+#: ../shadowsocks_pygi/shadowsocks.py:127
+msgid "Successful to update gfwlist"
+msgstr "更新gfwlist成功"
+
+#: ../shadowsocks_pygi/shadowsocks.py:129
+msgid "Failed to update gfwlist"
+msgstr "更新gfwlist失败"
+
+#: ../shadowsocks_pygi/shadowsocks.py:134
+msgid "Now proxy type is: {}"
+msgstr "代理类型为: {}"
+
+#: ../shadowsocks_pygi/shadowsocks.py:148
+msgid "Unknown proxy type: {}"
+msgstr "未知的代理类型: {}"
+
+#: ../shadowsocks_pygi/shadowsocks.py:178
+msgid "Load view of server list..."
+msgstr "加载服务器列表"
+
+#: ../shadowsocks_pygi/shadowsocks.py:183
+msgid "Append server<{}> to server list."
+msgstr "添加服务器<{}>到服务器列表"
+
+#: ../shadowsocks_pygi/shadowsocks.py:189
+msgid "_Server_List"
+msgstr "服务器列表"
+
+#: ../shadowsocks_pygi/shadowsocks.py:191
+msgid "Server list loaded."
+msgstr "服务器列表加载完成"
+
+#: ../shadowsocks_pygi/shadowsocks.py:194
+msgid "Load view of crypt methods..."
+msgstr "加载支持的加密方法"
+
+#: ../shadowsocks_pygi/shadowsocks.py:203
+msgid "Crypt methods list loaded."
+msgstr "加密方法加密完成"
+
+#: ../shadowsocks_pygi/shadowsocks.py:214
+msgid "Proxy type from config: {}"
+msgstr "从配置获取到代理类型为: {}"
+
+#: ../shadowsocks_pygi/shadowsocks.py:232
+msgid "{} from config: {}"
+msgstr "{}在配置文件的值为: {}"
+
+#: ../shadowsocks_pygi/tasks.py:27
+msgid "Task<{}> with args<{}> is starting"
+msgstr "开始执行Task<{}>, 参数是: <{}>"
+
+#: ../shadowsocks_pygi/tasks.py:34
+msgid "Task<{}> with args<{}> is completed"
+msgstr "Task<{}>执行完成, 参数是: <{}>"
+
+#: ../shadowsocks_pygi/tasks.py:40
+msgid "Result of Task<{}> is: {}"
+msgstr "Task<{}>的执行结果是: <{}>"
+
+#: ../shadowsocks_pygi/tasks.py:44
+msgid "An error occured when Task<{}> is running."
+msgstr "执行Task<{}>的时候发生了错误"

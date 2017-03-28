@@ -30,7 +30,7 @@
       </object>
     </child>
     <child>
-      <object class="GtkSwitch" id="ConnectionControll">
+      <object class="GtkSwitch" id="ConnectionControl">
         <property name="visible">True</property>
         <property name="can_focus">True</property>
         <property name="halign">center</property>
@@ -478,13 +478,13 @@
       </object>
     </child>
   </object>
-  <object class="GtkDialog" id="PerformanceDialog">
+  <object class="GtkDialog" id="PreferenceDialog">
     <property name="can_focus">False</property>
     <property name="type_hint">dialog</property>
     <property name="decorated">False</property>
     <property name="transient_for">ShadowsocksWindow</property>
     <property name="attached_to">ShadowsocksWindow</property>
-    <property name="startup_id">PerformanceDialog</property>
+    <property name="startup_id">PreferenceDialog</property>
     <child internal-child="vbox">
       <object class="GtkBox">
         <property name="can_focus">False</property>
@@ -507,7 +507,7 @@
                 <property name="receives_default">True</property>
                 <property name="use_stock">True</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="on_cancel_btn_clicked" object="PerformanceDialog" swapped="no"/>
+                <signal name="clicked" handler="on_cancel_btn_clicked" object="PreferenceDialog" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -792,7 +792,7 @@
         </child>
         <child>
           <object class="GtkInfoBar" id="NotifyBar">
-            <property name="visible">True</property>
+            <property name="visible">False</property>
             <property name="can_focus">False</property>
             <property name="message_type">warning</property>
             <property name="show_close_button">True</property>
@@ -801,15 +801,6 @@
                 <property name="can_focus">False</property>
                 <property name="spacing">6</property>
                 <property name="layout_style">end</property>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
               </object>
               <packing>
                 <property name="expand">False</property>

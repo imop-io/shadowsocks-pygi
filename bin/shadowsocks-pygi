@@ -1,10 +1,10 @@
-#!@PYTHON@
+#!/usr/bin/python3
 
 import sys
 import locale
 import gettext
 
-localedir = '@localedir@'
+localedir = '/app/share/locale'
 
 locale.bindtextdomain('shadowsocks-pygi', localedir)
 locale.textdomain('shadowsocks-pygi')
@@ -12,6 +12,6 @@ gettext.bindtextdomain('shadowsocks-pygi', localedir)
 gettext.textdomain('shadowsocks-pygi')
 
 if __name__ == "__main__":
-    sys.path.insert(1, '@pythondir@')
+    sys.path.insert(1, '/app/lib/python3.4/site-packages')
     from shadowsocks_pygi import main
     main()

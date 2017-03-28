@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from .ping import Ping
 from .config import Config
 
 from shadowsocks import shell
@@ -30,41 +31,49 @@ class Local:
     def control(self, action):
         self._config['daemon'] = action
         self._logger.debug('Receive action<{}> for sslocal.'.format(action))
-        if not self._server:
-            srv = self.select_server()
-            if not srv:
-                return False
-            self.set_server(srv)
-            self._logger.debug('Ready to connect to {}'.format(self._server))
-        self.prepare()
+        if action == 'start':
+            if not self._server:
+                srv = self.select_server()
+                self.set_server(srv)
+                self._logger.debug('Ready to connect to {}'.format(self._server))
+            self.compat_local()
+        self.compat_proc()
         pid = os.fork()
         if pid != 0:
             self._logger.debug('Control process return. child: {}'.format(pid))
-            print(os.wait())
+            os.wait()
             return True
 
         self._logger.debug('Control sslocal...')
         main()
 
     def select_server(self):
-        for srv in Config.servers:
-            if Config.servers.get(srv).enabled:
-                return srv
+        result = {}
+        for srv, cfg in Config.servers.items():
+            if cfg.enabled:
+                result[srv] = Ping(cfg.server, cfg.server_port).ping().avg
+        if not result:
+            raise Exception('No server is enabled!')
+        return sorted(result, key=result.get)[-1]
 
-    def prepare(self):
+    def compat_proc(self):
         if 'pid-file' not in self._config:
             self._config['pid-file'] = self._config.pid_file
 
         if 'log-file' not in self._config:
             self._config['log-file'] = self._config.log_file
 
+    def compat_local(self):
         if 'local_address' not in self._config:
             self._config.local_address = self._config.address
 
         if 'local_port' not in self._config:
             self._config.local_port = int(self._config.port)
 
+    @property
     def is_running(self):
+        if not os.path.exists(self._config.pid_file):
+            return False
 
         with open(self._config.pid_file) as pid_file:
             pid = int(pid_file.read().strip())
@@ -78,11 +87,11 @@ class Local:
         sock.settimeout(0.01)
         try:
             sock.connect((self._config.address, int(self._config.port)))
-            sock.send(b'0')
-            running = sock.recv(1) == b'\x00'
-            sock.close()
+            running = True
         except ConnectionRefusedError:
+            running = False
+        finally:
+            sock.shutdown(socket.SHUT_RD)
             sock.close()
-            return False
 
         return running

@@ -2,27 +2,27 @@
 # coding: utf8
 
 import os
+import time
 import logging
 import logging.config
 
-import gi
-gi.require_versions({'Gtk': '3.0', 'GLib': '2.0', 'Gio': '2.0'})
+from gettext import gettext as _
 
 from gi.repository import Gtk, GLib, Gio  # noqa
 
-from .pac import Pac  # noqa
-from .notify import Notify  # noqa
+from .pac import Pac
+from .local import Local
+from .notify import Notify
+from .config import Config
+from .handler import Handler
+from .gsettings import SystemProxy
 
-from .local import Local  # noqa
-
-from .config import Config  # noqa
-from .handler import Handler  # noqa
-from .gsettings import SystemProxy # noqa
+from .tasks import AsyncCall, AsyncDaemon
 
 try:
-    from shadowsocks.cryptor import method_supported  # noqa
+    from shadowsocks.cryptor import method_supported
 except ImportError as e:
-    from shadowsocks.encrypt import method_supported  # noqa
+    from shadowsocks.encrypt import method_supported
 
 
 class Shadowsocks(Gtk.Application):
@@ -42,26 +42,28 @@ class Shadowsocks(Gtk.Application):
             **kwargs
         )
         self._logger()
-        self.logger.info('Start...')
+        self.logger.info(_('Start...'))
         self.window = None
         self.builder = Gtk.Builder()
         self.methods_map = {}
 
         self.notify = Notify()
 
+        self.sslocal = Local()
+
         self.builder.add_from_file(self.ui)
-        self.logger.debug('Load ui from {}'.format(self.ui))
+        self.logger.debug(_('Load ui from {}').format(self.ui))
 
         self.builder.connect_signals(Handler(self))
-        self.logger.debug('Connect signal from class<Handler>')
+        self.logger.debug(_('Connect signal from class<Handler>'))
 
         self._signal_for_pac_menu()
         self._signal_for_proxy_menu()
         self._signal_for_connection_menu()
 
-        self._auto_connect()
+        self.create_notification()
 
-        self.sslocal = Local()
+        self._auto_connect()
 
     def _logger(self):
         logging.config.dictConfig(Config.logger)
@@ -70,31 +72,39 @@ class Shadowsocks(Gtk.Application):
 
     def do_activate(self):
         if not self.window:
-            self.logger.debug('Init window...')
+            self.logger.debug(_('Init window...'))
             self.window = self.builder.get_object('ShadowsocksWindow')
             header = self.builder.get_object('HeaderBar')
             header.set_show_close_button(True)
             menu_button = self.builder.get_object('MenuButton')
             menu_button.set_popover(self.builder.get_object('MenuPop'))
+            self.window.connect(
+                'delete-event',
+                lambda x, y: self.logger.debug(_('Window delete event.'))
+            )
             self.window.set_titlebar(header)
             self.window.set_application(self)
             self.create_server_view()
             self.create_supported_method_view()
-        self.logger.debug('Show window...')
+        self.logger.debug(_('Show window...'))
         self.window.show_all()
 
     def do_startup(self):
-        self.logger.debug('Application start.')
+        self.logger.debug(_('Application start.'))
         Gtk.Application.do_startup(self)
 
+    def do_destroy(self):
+        self.logger.debug(_('Application stop.'))
+        self.m.stop()
+
     def do_command_line(self, command_line):
-        self.logger.debug('Application command line parser...')
+        self.logger.debug(_('Application command line parser...'))
         self.activate()
         return 0
 
     def do_set_auto_connect(self, action, state):
         self.logger.debug(
-            'Auto_connect is selected. Current state is {}'.format(state)
+            _('Auto_connect is selected. Current state is {}').format(state)
         )
         action.set_state(state)
         Config.application.auto_connect = state.print_(True)
@@ -103,26 +113,27 @@ class Shadowsocks(Gtk.Application):
 
     def do_set_auto_reconnect(self, action, state):
         self.logger.debug(
-            'Auto_Reconnect is selected. Current state is {}'.format(state)
+            _('Auto_Reconnect is selected. Current state is {}').format(state)
         )
         action.set_state(state)
         Config.application.auto_reconnect = state.print_(True)
         Config.save_application()
 
-    def do_update_pac(self, *args):
-        print(args)
-        pac = Pac(Config)
-        pac.fetch_remote_gfwlist()
-        pac.fetch_user_rules()
-        if pac.generate().save():
-            self.notify.show('Successful to update gfwlist')
-            return True
-        self.notify.show('Failed to update gfwlist')
-        return False
+    def do_update_pac(self, action, state):
+        def func(*args):
+            self.logger.debug(_('Ready to update pac file..'))
+            pac = Pac(Config)
+            pac.fetch_remote_gfwlist()
+            pac.fetch_user_rules()
+            if pac.generate().save():
+                self.notify.show(_('Successful to update gfwlist'))
+                return True
+            self.notify.show(_('Failed to update gfwlist'))
+        return AsyncCall(func, None)
 
     def do_set_proxy(self, action, state):
         action.set_state(state)
-        self.logger.info('Now proxy type is: {}'.format(state))
+        self.logger.info(_('Now proxy type is: {}').format(state))
         Config.application.proxy_type = state.print_(True)
         Config.save_application()
         self._set_proxy(state.unpack())
@@ -136,34 +147,52 @@ class Shadowsocks(Gtk.Application):
             return SystemProxy().global_proxy()
         elif _type == 'none':
             return SystemProxy().none_proxy()
-        raise TypeError('Unknown proxy type: {}'.format(_type))
+        raise TypeError(_('Unknown proxy type: {}').format(_type))
 
     def _auto_connect(self):
-        if GLib.Variant.parse(Config.application.auto_connect).unpack():
-            self.sslocal.control('start')
+        auto_connect = Config.application.auto_connect
+        auto_connect = GLib.Variant.parse(None, auto_connect, None, None)
+        if auto_connect.unpack():
+            self.builder.get_object('ConnectionControl').set_state(True)
+            proxy_type = Config.application.proxy_type
             return self._set_proxy(
-                GLib.Variant.parse(Config.application.proxy_type).unpack()
+                GLib.Variant.parse(None, proxy_type, None, None).unpack()
             )
-        return self.sslocal.control('stop')
+        return AsyncCall(self.sslocal.control, 'stop')
+
+    def create_notification(self):
+        self.register()
+        self.notification = Gio.Notification.new(self.get_application_id())
+        self.notification.set_body('Startup.')
+        icon = Gio.ThemedIcon.new('network-vpn-symbolic')
+        self.notification.set_icon(icon)
+        self.send_notification('state', self.notification)
+
+    def create_menu_view(self):
+        self.menu = Gtk.Menu()
+        quit = Gtk.MenuItem('Quit')
+        quit.connect('activate', lambda item: self.quit())
+        self.menu.append(quit)
+        self.menu.show_all()
 
     def create_server_view(self):
-        self.logger.debug('Load view of server list...')
+        self.logger.debug(_('Load view of server list...'))
         server_list = Gtk.ListStore(str)
         for server in Config.servers.keys():
             server_list.append([server])
             self.logger.debug(
-                'Append server<{}> to server list.'.format(server)
+                _('Append server<{}> to server list.').format(server)
             )
         server_view = self.builder.get_object('ServerListView')
         server_view.set_model(server_list)
         self.builder.get_object('ServerSelection').select_path(Gtk.TreePath(0))
         cell = Gtk.CellRendererText()
-        column = Gtk.TreeViewColumn('_Server_List', cell, text=0)
+        column = Gtk.TreeViewColumn(_('_Server_List'), cell, text=0)
         server_view.append_column(column)
-        self.logger.debug('Server list loaded.')
+        self.logger.debug(_('Server list loaded.'))
 
     def create_supported_method_view(self):
-        self.logger.debug('Load view of crypt methods...')
+        self.logger.debug(_('Load view of crypt methods...'))
         method_list = Gtk.ListStore(str)
         for method in self.methods:
             self.methods_map[method] = method_list.append([method])
@@ -172,7 +201,7 @@ class Shadowsocks(Gtk.Application):
         cell = Gtk.CellRendererText()
         crypt_method_combo.pack_start(cell, True)
         crypt_method_combo.add_attribute(cell, "text", 0)
-        self.logger.debug('Crypt methods list loaded.')
+        self.logger.debug(_('Crypt methods list loaded.'))
 
     def _signal_for_proxy_menu(self):
         proxy_radio = Gio.SimpleAction.new_stateful(
@@ -182,12 +211,10 @@ class Shadowsocks(Gtk.Application):
         )
         proxy_radio.connect('activate', self.do_set_proxy)
         self.add_action(proxy_radio)
-        self.logger.debug(
-            'Proxy type from config: {}'.format(Config.application.proxy_type)
-        )
         proxy_type = Config.application.proxy_type \
             if Config.application.proxy_type is not None else "'none'"
         proxy_radio.set_state(GLib.Variant.parse(None, proxy_type, None, None))
+        self.logger.debug(_('Proxy type from config: {}').format(proxy_type))
 
     def _signal_for_pac_menu(self):
         action = Gio.SimpleAction.new('update_pac', None)
@@ -201,7 +228,7 @@ class Shadowsocks(Gtk.Application):
             action.connect('change-state', getattr(self, callback))
             self.add_action(action)
             state = Config.application.get(signal, 'false')
-            self.logger.debug('{} from config: {}'.format(signal, state))
+            self.logger.debug(_('{} from config: {}').format(signal, state))
             action.set_state(GLib.Variant.parse(None, state, None, None))
 
 
