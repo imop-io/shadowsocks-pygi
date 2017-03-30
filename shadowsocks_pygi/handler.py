@@ -130,9 +130,9 @@ class Handler:
         builder.get_object('NameEntry').set_text(server_name)
         builder.get_object('AddressEntry').set_text(addr)
         builder.get_object('PortEntry').set_text(str(config.server_port))
-        builder.get_object('PasswordEntry').set_text(config.get('password', ''))
+        builder.get_object('PasswordEntry').set_text(config.password)
         builder.get_object('PasswordDisplay').set_active(False)
-        builder.get_object('TimeoutEntry').set_text(str(config.get('timeout')))
+        builder.get_object('TimeoutEntry').set_text(str(config.timeout))
 
         method = config.get('method')
         builder.get_object('CryptMethodCombo') \

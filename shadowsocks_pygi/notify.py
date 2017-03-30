@@ -3,6 +3,8 @@
 
 import logging
 
+from gettext import gettext as _
+
 import gi
 gi.require_version('Notify', '0.7')
 from gi.repository import GLib, Notify   # noqa
@@ -23,5 +25,5 @@ class Notify:
 
     def show(self, text=''):
         self.notify.update(summary=Config.application_name, body=text)
-        self.logger.debug('Show notify message: {}'.format(text))
+        self.logger.debug(_('Show notify message: {}').format(text))
         return self.notify.show()

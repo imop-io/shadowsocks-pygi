@@ -42,9 +42,10 @@ class Shadowsocks(Gtk.Application):
             **kwargs
         )
         self._logger()
-        self.logger.info(_('Start...'))
+        self.logger.info(_('Start..'))
         self.window = None
         self.builder = Gtk.Builder()
+        self.builder.set_translation_domain('shadowsocks-pygi')
         self.methods_map = {}
 
         self.notify = Notify()
@@ -72,7 +73,7 @@ class Shadowsocks(Gtk.Application):
 
     def do_activate(self):
         if not self.window:
-            self.logger.debug(_('Init window...'))
+            self.logger.debug(_('Init window..'))
             self.window = self.builder.get_object('ShadowsocksWindow')
             header = self.builder.get_object('HeaderBar')
             header.set_show_close_button(True)
@@ -86,7 +87,7 @@ class Shadowsocks(Gtk.Application):
             self.window.set_application(self)
             self.create_server_view()
             self.create_supported_method_view()
-        self.logger.debug(_('Show window...'))
+        self.logger.debug(_('Show window..'))
         self.window.show_all()
 
     def do_startup(self):
@@ -98,7 +99,7 @@ class Shadowsocks(Gtk.Application):
         self.m.stop()
 
     def do_command_line(self, command_line):
-        self.logger.debug(_('Application command line parser...'))
+        self.logger.debug(_('Application command line parser..'))
         self.activate()
         return 0
 
@@ -176,7 +177,7 @@ class Shadowsocks(Gtk.Application):
         self.menu.show_all()
 
     def create_server_view(self):
-        self.logger.debug(_('Load view of server list...'))
+        self.logger.debug(_('Load view of server list..'))
         server_list = Gtk.ListStore(str)
         for server in Config.servers.keys():
             server_list.append([server])
@@ -192,7 +193,7 @@ class Shadowsocks(Gtk.Application):
         self.logger.debug(_('Server list loaded.'))
 
     def create_supported_method_view(self):
-        self.logger.debug(_('Load view of crypt methods...'))
+        self.logger.debug(_('Loading view of crypt methods.'))
         method_list = Gtk.ListStore(str)
         for method in self.methods:
             self.methods_map[method] = method_list.append([method])

@@ -380,8 +380,8 @@ msgid "io.imop.shadowsocks"
 msgstr ""
 
 #: ../shadowsocks_pygi/shadowsocks.py:43
-msgid "Start..."
-msgstr "开始运行..."
+msgid "Start.."
+msgstr "开始运行.."
 
 #: ../shadowsocks_pygi/shadowsocks.py:53
 msgid "Load ui from {}"
@@ -392,16 +392,16 @@ msgid "Connect signal from class<Handler>"
 msgstr "连接到信号处理类<Handler>"
 
 #: ../shadowsocks_pygi/shadowsocks.py:73
-msgid "Init window..."
-msgstr "初始化窗口..."
+msgid "Init window.."
+msgstr "初始化窗口.."
 
 #: ../shadowsocks_pygi/shadowsocks.py:81
 msgid "Window delete event."
 msgstr "主窗口被删除"
 
 #: ../shadowsocks_pygi/shadowsocks.py:87
-msgid "Show window..."
-msgstr "显示窗口..."
+msgid "Show window.."
+msgstr "显示窗口.."
 
 #: ../shadowsocks_pygi/shadowsocks.py:91
 msgid "Application start."
@@ -412,7 +412,7 @@ msgid "Application stop."
 msgstr "Application stop."
 
 #: ../shadowsocks_pygi/shadowsocks.py:99
-msgid "Application command line parser..."
+msgid "Application command line parser.."
 msgstr "解析命令行参数"
 
 #: ../shadowsocks_pygi/shadowsocks.py:105
@@ -444,7 +444,7 @@ msgid "Unknown proxy type: {}"
 msgstr "未知的代理类型: {}"
 
 #: ../shadowsocks_pygi/shadowsocks.py:178
-msgid "Load view of server list..."
+msgid "Loading view of server list."
 msgstr "加载服务器列表"
 
 #: ../shadowsocks_pygi/shadowsocks.py:183
@@ -460,7 +460,7 @@ msgid "Server list loaded."
 msgstr "服务器列表加载完成"
 
 #: ../shadowsocks_pygi/shadowsocks.py:194
-msgid "Load view of crypt methods..."
+msgid "Loading view of crypt methods."
 msgstr "加载支持的加密方法"
 
 #: ../shadowsocks_pygi/shadowsocks.py:203
