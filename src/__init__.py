@@ -11,7 +11,6 @@ gi.require_versions({
 
 from .shadowsocks import Shadowsocks
 
-
 def main():
     app = Shadowsocks()
     app.run(sys.argv)

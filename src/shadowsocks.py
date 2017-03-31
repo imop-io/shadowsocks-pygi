@@ -2,7 +2,6 @@
 # coding: utf8
 
 import os
-import time
 import logging
 import logging.config
 
@@ -17,7 +16,7 @@ from .config import Config
 from .handler import Handler
 from .gsettings import SystemProxy
 
-from .tasks import AsyncCall, AsyncDaemon
+from .tasks import AsyncCall
 
 try:
     from shadowsocks.cryptor import method_supported
